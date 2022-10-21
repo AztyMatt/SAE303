@@ -5,30 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     </head>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-        <script type="text/javascript">
+        <script type="module">
+        import dataJson from './ressources/coupon_reduction.json' assert { type: 'json' }
 
         google.charts.load('current', {'packages':['corechart']});
         google.charts.setOnLoadCallback(drawChart);
 
-        const json = [
-            { "Etiquettes": "N", "Somme": 789584.66 },
-            { "Etiquettes": "O", "Somme": 66371.95 }
-        ];
-
         function drawChart() {
 
-            var condArray = [['Étiquettes de lignes', 'Somme de MONTANT']]; 
-            // Loop through the JSON array, set up the value pair & push to the end of condArray
-            for(i=0; i<json.length; i++) {
-                condArray.push([json[i].Etiquettes, json[i].Somme]);
-            }
+            var jsonData = $.ajax({
+                    url: "./ressources/coupon_reduction.json",
+                    dataType: "json",
+                    async: false,
+                    }).responseText;
+            console.log(jsonData);
+
+            var data = google.visualization.arrayToDataTable($.parseJSON(jsonData));
 
             var options = {
-            title: 'Utilisation des coupons de réduction :'
+            title: 'My Daily Activities'
             };
-
-            var data = google.visualization.arrayToDataTable(condArray)
 
             var chart = new google.visualization.PieChart(document.getElementById('piechart'));
             chart.draw(data, options);

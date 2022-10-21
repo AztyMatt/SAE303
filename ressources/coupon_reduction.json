@@ -1,14 +1,5 @@
 [
- {
-   "Étiquettes de lignes": "N",
-   "Somme de MONTANT": "789584,66"
- },
- {
-   "Étiquettes de lignes": "O",
-   "Somme de MONTANT": "66371,95"
- },
- {
-   "Étiquettes de lignes": "Total général",
-   "Somme de MONTANT": "855956,61"
- }
+  ["Coupon","Number"],
+  ["N", 789584.66  ],
+  ["O", 66371.95  ]
 ]

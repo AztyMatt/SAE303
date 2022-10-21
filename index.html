@@ -14,18 +14,10 @@
         google.charts.setOnLoadCallback(drawChart);
 
         function drawChart() {
-
-            var jsonData = $.ajax({
-                    url: "./ressources/coupon_reduction.json",
-                    dataType: "json",
-                    async: false,
-                    }).responseText;
-            console.log(jsonData);
-
-            var data = google.visualization.arrayToDataTable($.parseJSON(jsonData));
+            var data = google.visualization.arrayToDataTable(dataJson);
 
             var options = {
-            title: 'My Daily Activities'
+            title: 'Utilisatiion des coupons :'
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('piechart'));

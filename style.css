@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
 :root{
-    --header-height: 100px;
+    --header-height: 75px;
     --neutral-dark:#1f1f1f;
     --neutral-light:#282828;
 }
@@ -17,6 +17,7 @@ body{
     width: 100%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    background-color: var(--neutral-dark);
 }
 
 header{
@@ -32,7 +33,7 @@ header{
 }
 
 header nav{
-    width: 300px;
+    width: 200px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -45,9 +46,13 @@ header nav a{
 }
 
 .active{
-    color: #3fabff;
-    border-bottom: 3px solid #3fabff;
-    margin-bottom: -3px;
+    color: #3fabff !important;
+    border-bottom: 3px solid #3fabff !important;
+    margin-bottom: -3px !important;
+}
+
+.active_bis{
+    background-color: var(--neutral-dark)!important;
 }
 
 section{
@@ -68,9 +73,56 @@ section{
     height: calc((100vh - var(--header-height) - 0.5px) / 2);
 }
 
-#revenus{
+#container{
+    display: flex;
+    flex-direction: column;
     height: calc(100vh - var(--header-height));
     width: 100%;
+}
+
+#container nav{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#container div{
+    height: 100%;
+}
+
+.btn{
+    width: calc(100% / 6);
+    border: none;
+    border-radius: none;
+    height: 70px;
+    color: #a6aaab;
+    font-size: 16px;
+    background-color: var(--neutral-light);
+    cursor: pointer;
+}
+
+#cuisine{
+    color: #dc3912;
+}
+
+#electromenager{
+    color: #3366cc;
+}
+
+#image-son{
+    color: #ff9900;
+}
+
+#informatique{
+    color: #109618;
+}
+
+#telephonie{
+    color: #990099;
+}
+
+canvas{
+    margin: 10px 20px;
 }
 
 .description{

@@ -15,14 +15,24 @@
             <nav>
                 <a href="index.html">Overview</a>
                 <a href="revenus.html">Revenus</a>
-                <a href="#">Inconnu</a>
             </nav>
         </header>
         <section class="charts">
-            <canvas id="revenus"></canvas>
+            <div id="container">
+                <nav>
+                    <button class="btn active_bis" id="toutes">Toutes</button>
+                    <button class="btn" id="cuisine">Cuisine</button>
+                    <button class="btn" id="electromenager">Electromenager</button>
+                    <button class="btn" id="image-son">Image-Son</button>
+                    <button class="btn" id="informatique">Informatique</button>
+                    <button class="btn" id="telephonie">Telephonie</button>
+                </nav>
+                <div>
+                    <canvas id="revenus"></canvas>
+                </div>
+            </div>
         </section>
         <section class="description">
-
         </section>
     </body>
         <script type="text/javascript" src="revenus.js"></script>

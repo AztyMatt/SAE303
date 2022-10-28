@@ -19,7 +19,6 @@ function set_data(){
     backgroundColor: colors[i],
     data: jsonData[Object.keys(jsonData)[i]]
     });
-    console.log(Object.keys(jsonData)[i]);
   }
 }
 
@@ -38,7 +37,7 @@ var myChart = new Chart(ctx, {
       },
       y: {
         stacked: true,
-      }
+      },
     },
     responsive: true,
     maintainAspectRatio: false,
@@ -80,7 +79,7 @@ var myChart = new Chart(ctx, {
             document.getElementById("revenus").style.cursor = 'default';
             return;
           }
-        }
+        },
       }
     },
   }

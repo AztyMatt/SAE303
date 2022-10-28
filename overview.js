@@ -31,7 +31,7 @@ function Piechart() {
     var options = {
         title: arguments[1],
         titleTextStyle: { color: 'white', fontSize: 16, bold: 'true'},
-        slices: {  0: {color: '#dc3912'}, 1: {color: '#3366cc'}},
+        colors: ['#dc3912','#3366cc','#ff9900','#109618','#990099','#0099c6','#dd4477','#66aa00','#b82e2e','#316395','#994499','#22aa99','#aaaa11'],
         chartArea: {width: 500, height: 300, left: 30, top: 50},
         backgroundColor: 'transparent',
         legend: {position: 'right', textStyle: { color: 'white'}},

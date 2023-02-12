@@ -18,6 +18,7 @@ body{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     background-color: var(--neutral-dark);
+    overflow: hidden;
 }
 
 header{
@@ -30,6 +31,7 @@ header{
     display: flex;
     align-items: flex-end;
     padding: 0 30px;
+    visibility: hidden;
 }
 
 header nav{
@@ -67,11 +69,15 @@ section{
     justify-content: space-evenly;
     background-color: var(--neutral-dark);
     width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow-y: scroll;
 }
 
 .piechart{
     display: block;
     height: calc((100vh - var(--header-height) - 0.5px) / 2);
+    visibility: hidden;
 }
 
 #container{
@@ -133,6 +139,8 @@ canvas{
     color: white;
     padding: 20px;
     width: 100%;
+    visibility: hidden;
+    transform: translateX(0px);
 }
 
 .description h1{

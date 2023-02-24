@@ -119,7 +119,7 @@ function product_analysis(){
 let buttons = document.querySelectorAll(".btn");
 for(let i = 0; i < buttons.length; i++){
   buttons[i].addEventListener("click",function(){
-  chart = this.innerText;
+  chart = this.innerText.toLowerCase();
   analyse = i;
   product_analysis()
 
